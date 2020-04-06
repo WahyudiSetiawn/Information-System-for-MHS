@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2020-04-03" view-index="0" gantt-divider-location="344" resource-divider-location="300" version="2.8.10" locale="en_US">
+    <description/>
+    <view zooming-state="default:0" id="gantt-chart">
+        <field id="tpd3" name="Name" width="211" order="0"/>
+        <field id="tpd4" name="Begin date" width="63" order="1"/>
+        <field id="tpd5" name="End date" width="51" order="2"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="0" mon="0" tue="0" wed="0" thu="0" fri="0" sat="0"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" name="Initiating Task" color="#000000" meeting="false" start="2020-02-20" duration="4" complete="0" thirdDate="2020-02-20" thirdDate-constraint="0" expand="true">
+            <task id="1" name="Choose a Project Title" color="#8cb6ce" meeting="false" start="2020-02-20" duration="1" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="4" type="3" difference="0" hardness="Strong"/>
+            </task>
+            <task id="4" name="Choose a Leader and Member" color="#8cb6ce" meeting="false" start="2020-02-20" duration="1" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="6" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="6" name="Identify and Analyze the Project Topic" color="#8cb6ce" meeting="false" start="2020-02-21" duration="1" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="7" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="7" name="Identify the Project Background" color="#8cb6ce" meeting="false" start="2020-02-22" duration="1" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="13" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="13" name="Identify Project Objectives and Aims" color="#8cb6ce" meeting="false" start="2020-02-23" duration="1" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="14" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="14" name="Complete initiating tasks" color="#8cb6ce" meeting="true" start="2020-02-24" duration="0" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="17" name="Planning Tasks" color="#8cb6ce" meeting="false" start="2020-03-02" duration="6" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+            <task id="20" name="Develop Project Scope" color="#8cb6ce" meeting="false" start="2020-03-02" duration="1" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="22" type="1" difference="0" hardness="Strong"/>
+            </task>
+            <task id="22" name="Develop Project Schedule" color="#8cb6ce" meeting="false" start="2020-03-02" duration="1" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="23" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="23" name="Setup Trello board" color="#8cb6ce" meeting="false" start="2020-03-03" duration="1" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="24" type="3" difference="0" hardness="Strong"/>
+            </task>
+            <task id="24" name="Develop Work Breakdown Structure" color="#8cb6ce" meeting="false" start="2020-03-03" duration="1" complete="0" thirdDate="2020-03-04" thirdDate-constraint="0" expand="true">
+                <depend id="26" type="1" difference="0" hardness="Strong"/>
+            </task>
+            <task id="26" name="Develop Baseline Gantt Chart" color="#8cb6ce" meeting="false" start="2020-03-03" duration="1" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="28" type="3" difference="0" hardness="Strong"/>
+            </task>
+            <task id="28" name="Develop Milestone/Deliverable" color="#8cb6ce" meeting="false" start="2020-03-03" duration="1" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="30" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="30" name="Setup GitHub respiratory" color="#8cb6ce" meeting="false" start="2020-03-04" duration="1" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="31" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="31" name="Develop Technical Description" color="#8cb6ce" meeting="false" start="2020-03-05" duration="1" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="33" type="1" difference="0" hardness="Strong"/>
+            </task>
+            <task id="33" name="Develop Use Case Diagram" color="#8cb6ce" meeting="false" start="2020-03-05" duration="1" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="34" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="34" name="Develop Expanded Use Case Diagram" color="#8cb6ce" meeting="false" start="2020-03-06" duration="1" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="35" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="35" name="Develop Analysis Class Diagram" color="#8cb6ce" meeting="false" start="2020-03-07" duration="1" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="36" type="1" difference="0" hardness="Strong"/>
+            </task>
+            <task id="36" name="Develop System Sequence Diagram" color="#8cb6ce" meeting="false" start="2020-03-07" duration="1" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="37" type="3" difference="0" hardness="Strong"/>
+            </task>
+            <task id="37" name="Develop a Risk Management Plan" color="#8cb6ce" meeting="false" start="2020-03-07" duration="1" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="38" type="4" difference="0" hardness="Strong"/>
+            </task>
+            <task id="38" name="Complete Project Plan" color="#8cb6ce" meeting="true" start="2020-03-07" duration="0" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="41" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="39" name="Executing Task" color="#8cb6ce" meeting="false" start="2020-03-07" duration="50" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+            <task id="41" name="Requirement Definition" color="#8cb6ce" meeting="false" start="2020-03-07" duration="1" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="70" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="70" name="Design Specification Document" color="#8cb6ce" meeting="false" start="2020-03-08" duration="4" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="43" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="43" name="Design the Website" color="#8cb6ce" meeting="false" start="2020-03-12" duration="10" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="45" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="45" name="Create the Database" color="#8cb6ce" meeting="false" start="2020-03-22" duration="2" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="48" type="1" difference="0" hardness="Strong"/>
+            </task>
+            <task id="48" name="Input Database" color="#8cb6ce" meeting="false" start="2020-03-22" duration="3" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="49" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="49" name="Integrate the Website and the Database" color="#8cb6ce" meeting="false" start="2020-03-25" duration="5" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="50" type="4" difference="0" hardness="Strong"/>
+            </task>
+            <task id="50" name="Create Prototype 1" color="#8cb6ce" meeting="false" start="2020-03-11" duration="14" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="51" type="2" difference="0" hardness="Strong"/>
+                <depend id="60" type="2" difference="0" hardness="Rubber"/>
+            </task>
+            <task id="51" name="Iteration 1 documentation" color="#8cb6ce" meeting="false" start="2020-03-25" duration="3" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="56" type="2" difference="0" hardness="Strong"/>
+                <depend id="58" type="2" difference="0" hardness="Strong"/>
+                <depend id="66" type="3" difference="0" hardness="Rubber"/>
+                <depend id="71" type="3" difference="0" hardness="Rubber"/>
+            </task>
+            <task id="52" name="Create Prototype 2" color="#8cb6ce" meeting="false" start="2020-04-10" duration="14" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="53" type="2" difference="0" hardness="Strong"/>
+                <depend id="61" type="2" difference="0" hardness="Strong"/>
+                <depend id="71" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="53" name="Iteration 2 Documentation" color="#8cb6ce" meeting="false" start="2020-04-24" duration="2" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="56" type="2" difference="0" hardness="Strong"/>
+                <depend id="58" type="2" difference="0" hardness="Strong"/>
+                <depend id="59" type="2" difference="0" hardness="Strong"/>
+                <depend id="68" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="71" name="Complete Iteration 1" color="#8cb6ce" meeting="true" start="2020-04-24" duration="0" complete="0" thirdDate="2020-02-25" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="54" name="Monitoring and Controlling Tasks" color="#8cb6ce" meeting="false" start="2020-04-05" duration="22" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+            <task id="58" name="Update Trello" color="#8cb6ce" meeting="false" start="2020-04-26" duration="1" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true"/>
+            <task id="56" name="Update Baseline Gantt Chart" color="#8cb6ce" meeting="false" start="2020-04-26" duration="1" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true"/>
+            <task id="59" name="Update Design and Specification Document" color="#8cb6ce" meeting="false" start="2020-04-26" duration="1" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true"/>
+            <task id="60" name="Testing Prototype 1" color="#8cb6ce" meeting="false" start="2020-04-05" duration="1" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true"/>
+            <task id="61" name="Testing Prototype 2" color="#8cb6ce" meeting="false" start="2020-04-24" duration="1" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="64" name="Closing Tasks" color="#8cb6ce" meeting="false" start="2020-04-06" duration="21" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+            <task id="66" name="Prototype 1 Presentation and Live Demonstration" color="#8cb6ce" meeting="false" start="2020-04-06" duration="1" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true"/>
+            <task id="68" name="Prototype 2 Presentation and Live Demonstration" color="#8cb6ce" meeting="false" start="2020-04-26" duration="1" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true">
+                <depend id="69" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="69" name="End of The Project" color="#8cb6ce" meeting="true" start="2020-04-27" duration="0" complete="0" thirdDate="2020-03-05" thirdDate-constraint="0" expand="true"/>
+        </task>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>

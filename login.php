@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title> User Login and Registration </title>
@@ -10,7 +11,7 @@
 	<div class="login-box">
 	<div class="row">
 	<div class="col-md-6 login-left">
-		<h2> Login </h2>
+		<h3> Login </h3>
 		<form action="validation.php" method="post">
 			<div class="form-group">
 				<label>Username</label>
@@ -30,7 +31,7 @@
 	</div>
 		
 	<div class="col-md-6 login-right">
-		<h2> Register </h2>
+		<h3> Register </h3>
 		<form action="registration.php" method="post">
 			<div class="form-group">
 				<label>Username</label>

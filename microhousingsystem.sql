@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 05, 2020 at 05:08 PM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.3
+-- Waktu pembuatan: 06 Bulan Mei 2020 pada 09.07
+-- Versi server: 10.1.38-MariaDB
+-- Versi PHP: 7.3.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_allocation`
+-- Struktur dari tabel `tb_allocation`
 --
 
 CREATE TABLE `tb_allocation` (
@@ -40,7 +40,7 @@ CREATE TABLE `tb_allocation` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_applicant`
+-- Struktur dari tabel `tb_applicant`
 --
 
 CREATE TABLE `tb_applicant` (
@@ -52,7 +52,7 @@ CREATE TABLE `tb_applicant` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_application`
+-- Struktur dari tabel `tb_application`
 --
 
 CREATE TABLE `tb_application` (
@@ -66,10 +66,22 @@ CREATE TABLE `tb_application` (
   `staff_ID` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `tb_application`
+--
+
+INSERT INTO `tb_application` (`application_ID`, `application_Date`, `required_Month`, `required_Year`, `status`, `email`, `residence_ID`, `staff_ID`) VALUES
+(1, 2020, '2020-06', '2020', 'New', 'cemboleke@gmail.com', 1, 1),
+(37, 2020, '2021-01', '2021', 'New', 'twicejang@gmail.com', 2, 1),
+(38, 2020, '2020-06', '2020', 'New', 'bagusparadhita@gmail.com', 4, 2),
+(39, 2020, '2021-01', '2021', 'New', 'cemboleke@gmail.com', 1, 1),
+(40, 2020, '2021-01', '2021', 'New', 'cemboleke@gmail.com', 1, 1),
+(41, 2020, '2021-01', '2021', 'New', 'cemboleke@gmail.com', 1, 1);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_housing_officer`
+-- Struktur dari tabel `tb_housing_officer`
 --
 
 CREATE TABLE `tb_housing_officer` (
@@ -80,7 +92,7 @@ CREATE TABLE `tb_housing_officer` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_residence`
+-- Struktur dari tabel `tb_residence`
 --
 
 CREATE TABLE `tb_residence` (
@@ -92,10 +104,26 @@ CREATE TABLE `tb_residence` (
   `staff_ID` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `tb_residence`
+--
+
+INSERT INTO `tb_residence` (`residence_ID`, `address`, `num_Units`, `size_Per_Unit`, `monthly_Rental`, `staff_ID`) VALUES
+(1, 'Kuala Lumpur', 10, '11', '500', 1),
+(2, 'Kuala Lumpur', 20, '7', '250', 1),
+(3, 'Kuala Lumpur', 15, '10', '300', 2),
+(4, 'Kuala Lumpur', 26, '25', '1500', 2),
+(5, 'Kuala Lumpur', 15, '7', '250', 2),
+(6, 'Kuala Lumpur', 10, '10', '300', 1),
+(7, 'Kuala Lumpur', 10, '10', '300', 1),
+(8, 'Kuala Lumpur', 26, '15', '700', 2),
+(9, 'Kuala Lumpur', 13, '7', '250', 1),
+(10, 'Kuala Lumpur', 13, '7', '250', 1);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_unit`
+-- Struktur dari tabel `tb_unit`
 --
 
 CREATE TABLE `tb_unit` (
@@ -108,7 +136,7 @@ CREATE TABLE `tb_unit` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_user`
+-- Struktur dari tabel `tb_user`
 --
 
 CREATE TABLE `tb_user` (
@@ -120,11 +148,14 @@ CREATE TABLE `tb_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_user`
+-- Dumping data untuk tabel `tb_user`
 --
 
 INSERT INTO `tb_user` (`username`, `password`, `fullname`, `email`, `user_type`) VALUES
+('', '', '', '', ''),
 ('bagus53', '1234', 'I Kadek Bagus Paradhita Utama', 'bagusparadhita@gmail.com', 'applicant'),
+('cemboleke', '1234', 'cemboleke aselole', 'cemboleke@gmail.com', 'housing officer'),
+('cemboleke69', '1234', 'cemboleke asemlehoy', 'cemboleke@gmail.com', 'housing officer'),
 ('chacha', '2345', 'chacha maricha', 'chacha@gmail.com', 'housing officer'),
 ('gantul', '4567', 'gantoelz', 'gantulmentalmentul@gmail.com', 'applicant'),
 ('jono', '4567', 'jono joni', 'jono@gmail.com', 'housing officer');
@@ -134,7 +165,7 @@ INSERT INTO `tb_user` (`username`, `password`, `fullname`, `email`, `user_type`)
 --
 
 --
--- Indexes for table `tb_allocation`
+-- Indeks untuk tabel `tb_allocation`
 --
 ALTER TABLE `tb_allocation`
   ADD PRIMARY KEY (`allocation_ID`),
@@ -143,79 +174,60 @@ ALTER TABLE `tb_allocation`
   ADD KEY `application_ID` (`application_ID`);
 
 --
--- Indexes for table `tb_applicant`
+-- Indeks untuk tabel `tb_applicant`
 --
 ALTER TABLE `tb_applicant`
   ADD PRIMARY KEY (`email`);
 
 --
--- Indexes for table `tb_application`
+-- Indeks untuk tabel `tb_application`
 --
 ALTER TABLE `tb_application`
   ADD PRIMARY KEY (`application_ID`),
   ADD KEY `email` (`email`);
 
 --
--- Indexes for table `tb_housing_officer`
+-- Indeks untuk tabel `tb_housing_officer`
 --
 ALTER TABLE `tb_housing_officer`
   ADD PRIMARY KEY (`staff_ID`),
   ADD KEY `username` (`username`);
 
 --
--- Indexes for table `tb_residence`
+-- Indeks untuk tabel `tb_residence`
 --
 ALTER TABLE `tb_residence`
   ADD PRIMARY KEY (`residence_ID`),
   ADD KEY `staff_ID` (`staff_ID`);
 
 --
--- Indexes for table `tb_unit`
+-- Indeks untuk tabel `tb_unit`
 --
 ALTER TABLE `tb_unit`
   ADD PRIMARY KEY (`unit_ID`),
   ADD KEY `residence_ID` (`residence_ID`);
 
 --
--- Indexes for table `tb_user`
+-- Indeks untuk tabel `tb_user`
 --
 ALTER TABLE `tb_user`
   ADD PRIMARY KEY (`username`);
 
 --
--- Constraints for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- Constraints for table `tb_allocation`
---
-ALTER TABLE `tb_allocation`
-  ADD CONSTRAINT `tb_allocation_ibfk_1` FOREIGN KEY (`unit_ID`) REFERENCES `tb_unit` (`unit_ID`),
-  ADD CONSTRAINT `tb_allocation_ibfk_2` FOREIGN KEY (`application_ID`) REFERENCES `tb_application` (`application_ID`);
-
---
--- Constraints for table `tb_application`
+-- AUTO_INCREMENT untuk tabel `tb_application`
 --
 ALTER TABLE `tb_application`
-  ADD CONSTRAINT `tb_application_ibfk_1` FOREIGN KEY (`email`) REFERENCES `tb_applicant` (`email`);
+  MODIFY `application_ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
--- Constraints for table `tb_housing_officer`
---
-ALTER TABLE `tb_housing_officer`
-  ADD CONSTRAINT `tb_housing_officer_ibfk_1` FOREIGN KEY (`username`) REFERENCES `tb_user` (`username`);
-
---
--- Constraints for table `tb_residence`
+-- AUTO_INCREMENT untuk tabel `tb_residence`
 --
 ALTER TABLE `tb_residence`
-  ADD CONSTRAINT `tb_residence_ibfk_1` FOREIGN KEY (`staff_ID`) REFERENCES `tb_housing_officer` (`staff_ID`);
-
---
--- Constraints for table `tb_unit`
---
-ALTER TABLE `tb_unit`
-  ADD CONSTRAINT `tb_unit_ibfk_1` FOREIGN KEY (`residence_ID`) REFERENCES `tb_residence` (`residence_ID`);
+  MODIFY `residence_ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

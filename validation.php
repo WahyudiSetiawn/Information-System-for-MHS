@@ -16,11 +16,34 @@ $result = mysqli_query($con, $s);
 
 $num = mysqli_num_rows($result);
 
-if($num == 1){
-	$_SESSION['username'] = $name;
-	header('location:home.php');
-}else{
-	header('location:login.php');
+if($num > 0){
+ 
+	$data = mysqli_fetch_assoc($result);
+ 
+	// cek jika user login sebagai admin
+	if($data['user_type']=="housing officer"){
+ 
+		// buat session login dan username
+		$_SESSION['username'] = $name;
+		$_SESSION['user_type'] = "housing officer";
+		// alihkan ke halaman dashboard admin
+		header("location:homeHousingOfficer.php");
+ 
+	// cek jika user login sebagai pegawai
+	}else if($data['user_type']=="applicant"){
+		// buat session login dan username
+		$_SESSION['username'] = $name;
+		$_SESSION['user_type'] = "applicant";
+		// alihkan ke halaman dashboard pegawai
+		header("location:homeApplicant.php");
+		 
+	}else{
+		// alihkan ke halaman login kembali
+		header("location:login.php");
+	}	
+}
+else{
+	header("location:login.php");
 }
 
 ?>
